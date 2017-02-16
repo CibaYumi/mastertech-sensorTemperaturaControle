@@ -7,12 +7,12 @@
 
 // Utilize o endereço MAC que está na etiqueta branca da
 // sua Galielo
-byte mac[] = { 0x98, 0x4F, 0xEE, 0x05, 0xAB, 0x8E }; 
+byte mac[] = { 0x98, 0x4F, 0xEE, 0x05, 0x71, 0x03 }; 
 
 // IP do servidor e porta do servidor.
 //IPAddress server(192,168,1,32);
-char server[] = "0.tcp.ngrok.io";
-int port = 10167;
+char server[] = "172.16.15.41";
+int port = 3000;
 
 
 //int tolerancia = 21;
@@ -84,7 +84,7 @@ void loop(){
         client.print(total);
         Serial.println(total);
         client.println(" HTTP/1.0");
-        client.println("Host: 0.tcp.ngrok.io");
+        client.println("Host: 172.16.15.41");
         client.println();
       } else {
         // Problema na conexão
